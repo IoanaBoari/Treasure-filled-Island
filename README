@@ -1,9 +1,7 @@
 //BOARI Ioana-Ruxandra 312CD					README - TEMA3 SDA
 
-CAND RULEZ LOCAL PRIMESC PUNCTAJUL PE VALGRIND PENTRU CERINTA 1 
-DAR PE VMCHECKER NU PRIMESC PUNCTAJ PE VALGRIND PENTRU NICIUN TEST
 
-    Pentur implementarea temei am folosit un fisier "tema3.h" in care
+    Pentru implementarea temei am folosit un fisier "tema3.h" in care
 am definit structurile folosite si functiile necesare pentru indeplinirea
 cerintelor. In fisierul "tema3.c" am implementat rezolvarea temei cu ajutorul
 functiilor din fisierul "tema3.h". Alt fisier a fost "Makefile"-ul folosit pentru
