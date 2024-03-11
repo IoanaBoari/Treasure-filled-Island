@@ -1,0 +1,31 @@
+==459== Conditional jump or move depends on uninitialised value(s)
+==459==    at 0x484FBDC: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==459==    by 0x10B282: main (tema3.c:167)
+==459==  Uninitialised value was created by a heap allocation
+==459==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==459==    by 0x10B1D0: main (tema3.c:159)
+==459== 
+==459== Conditional jump or move depends on uninitialised value(s)
+==459==    at 0x10B285: main (tema3.c:167)
+==459==  Uninitialised value was created by a heap allocation
+==459==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==459==    by 0x10B1D0: main (tema3.c:159)
+==459== 
+==459== Conditional jump or move depends on uninitialised value(s)
+==459==    at 0x484FBDC: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==459==    by 0x10B2D5: main (tema3.c:170)
+==459==  Uninitialised value was created by a heap allocation
+==459==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==459==    by 0x10B1D0: main (tema3.c:159)
+==459== 
+==459== Conditional jump or move depends on uninitialised value(s)
+==459==    at 0x10B2D8: main (tema3.c:170)
+==459==  Uninitialised value was created by a heap allocation
+==459==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==459==    by 0x10B1D0: main (tema3.c:159)
+==459== 
+==459== 1,248 bytes in 78 blocks are definitely lost in loss record 5 of 7
+==459==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==459==    by 0x109ABA: addEdgeListOrientated (tema3.h:247)
+==459==    by 0x10B65A: main (tema3.c:210)
+==459== 

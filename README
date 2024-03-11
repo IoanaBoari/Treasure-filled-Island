@@ -1,0 +1,91 @@
+//BOARI Ioana-Ruxandra 312CD					README - TEMA3 SDA
+
+CAND RULEZ LOCAL PRIMESC PUNCTAJUL PE VALGRIND PENTRU CERINTA 1 
+DAR PE VMCHECKER NU PRIMESC PUNCTAJ PE VALGRIND PENTRU NICIUN TEST
+
+    Pentur implementarea temei am folosit un fisier "tema3.h" in care
+am definit structurile folosite si functiile necesare pentru indeplinirea
+cerintelor. In fisierul "tema3.c" am implementat rezolvarea temei cu ajutorul
+functiilor din fisierul "tema3.h". Alt fisier a fost "Makefile"-ul folosit pentru
+compilarea surselor, crearea executabilului, rularea acestuia si stergerea lui.
+
+			Descrierea fisierului tema3.h:
+
+DESPRE STRUCTURI:
+
+    Pentru a putea creea grafurile am ales sa folosesc o codificare pentru fiecare 
+obiectiv. Astfel am implementat structura "Harta" in care am retinut un vector 
+de siruri de caractere(char** obiective), reprezentand fiecare obiectiv, 
+o codificare pentru acestea(int key[MAX]) si adancimea pentru fiecare nod
+(int adancime[MAX]), pe care am folosit-o doar la cerinta 2. Am folosit 
+structurile ListNode si List pentru a crea o lista simplu inlantuita, avand ca elemente
+codificarile obiectivelor. Am implementat Stack si Queue avand ca elemente 
+ListNode. In structura TNode am implementat nodul pentru graf, ce contine 
+indicele destinatiei, costul drumului si un pointer catre urmatorul nod. 
+In structura TGraphL am implementat graful, folosind lista de adiacenta.
+
+DESPRE FUNCTII:
+
+Functia "eliberareHarta" elibereaza toata memoria alocata pentru structura Harta.
+
+Functia "createNode" creeaza un element de tip ListNode cu un key dat ca parametru.
+
+Functiile "createList", "destroyList", "isListEmpty" sunt functiile clasice 
+folosite pentru lista simplu inlantuita.
+
+Am folosit functiile clasice si binecunoscute atat din curs cat si din
+laborator pentru implementarea unei stive:"createStack", "isStackEmpty", 
+"push", "top", "pop", "destroyStack".
+
+Am folosit functiile clasice si binecunoscute atat din curs cat si din
+laborator pentru implementarea unei cozi:"createQueue", "isQueueEmpty", 
+"enqueue", "front", "dequeue", "destroyQueue".
+
+Functia "createGraphAdjList" creeaza un graf prin alocare dinamica a memoriei, 
+primind ca parametru numarul de noduri ale grafului.
+
+Functia "addEdgeList" adauga nodul v1 in lista de adiacenta a nodului v2 si 
+viceversa si seteaza costul drumului.
+
+Functia "addEdgeListOrientated" adauga nodul v1 in lista de adiacenta a nodului 
+v2, creand astfel o muchie orientata.
+
+Functia "checkEdge" verifica daca exista muchie intre 2 noduri primite 
+ca parametru.
+
+Functiile "dfsRecHelper" si "dfsRecursive" le-am implementat ca la laborator, 
+folosindu-le pentru a parcurge graful in adancime.
+
+Functia "dijkstra" implementeaza binecunoscutul algoritm al lui Dijkstra.
+
+Functia "Prim" implementeaza binecunoscutul algoritm al lui Prim pentru 
+determinarea arborelui minim de acoperire. Functia returneaza costul minim total.
+
+Functia "bfs" am implementat-o ca in laborator si am folosit-o pentru 
+a parcurge graful in latime.
+
+Functia "countConnectedComponents" se foloseste de o stiva si de parcurgerea bfs 
+pentru a numara componentele conexe din graf.
+
+Functiile "removeEdgeList", "removeNodeList", "destroyGraphAdjList" le folosesc 
+pentru a elibera memoria alocata pentru grafuri.
+
+			Descriere fisierului tema3.c:
+
+Cu ajutorul functiilor din fisierul tema3.h am implementat in acest fisier
+rezolvarea temei.
+
+Cerinta 1 se executa atunci cand se primeste ca argument in linia de comanda 
+"1". Pentru a retine datele din fisierul de intrare am folosit 2 vectori de 
+siruri de caractere (varf1 si varf2) si vector de intregi pentru costurile 
+drumurilor (cost). In vectorul harta->obiective am retinut toate obiectivele si 
+in vectorul harta->key am retinut codificarile pentru acestea. Folosind aceste 
+codificari am creat graful. Apoi am apelat functia "countConnectedComponents" 
+pentru a determina numarul de zone, pe care l-am scris pe prima linie din 
+fisierul de iesire. Cu ajutorul algoritmului lui Prim am determinat costul total 
+minim al drumurilor ce urmeaza sa fie renovate. Apoi am ales sa folosesc qsort
+pentru a sorta crescator aceste costuri, inainte de a le scrie in fisierul de iesire.
+In final, am eliberat memoria alocata si am inchis fisierele.
+
+Cerinta 2 se executa  atunci cand se primeste ca argument in linia de comanda 
+"2".
